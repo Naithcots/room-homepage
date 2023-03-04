@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 import Navigation from "../Navigation";
 import styles from "./index.module.css";
@@ -28,6 +29,20 @@ const Header = () => {
           />
         </button>
         <h3 className={styles.heading}>room</h3>
+        <div className={styles.links}>
+          <Link href={"#"} className={styles.link}>
+            home
+          </Link>
+          <Link href={"#"} className={styles.link}>
+            shop
+          </Link>
+          <Link href={"#"} className={styles.link}>
+            about
+          </Link>
+          <Link href={"#"} className={styles.link}>
+            contact
+          </Link>
+        </div>
       </div>
       {navigationOpen && <Navigation onClose={closeNavigation} />}
     </header>

@@ -16,6 +16,8 @@
 }
 
 .image {
+  margin-inline: auto;
+
   max-width: 100%;
   height: auto;
 }

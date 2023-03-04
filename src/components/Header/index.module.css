@@ -33,3 +33,50 @@
 
   text-align: center;
 }
+
+.links {
+  display: none;
+}
+
+@media screen and (min-width: 40em) {
+  .header {
+    height: 120px;
+  }
+
+  .header-panel {
+    padding-inline: 3em;
+    gap: 4em;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .heading {
+    flex-grow: unset;
+  }
+
+  .links {
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+
+  .link {
+    position: relative;
+  }
+
+  .link:hover::after {
+    content: "";
+    width: 50%;
+    height: 2px;
+
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+
+    transform: translateX(50%);
+    background-color: white;
+  }
+}
