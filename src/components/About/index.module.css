@@ -26,12 +26,12 @@
 @media screen and (min-width: 50em) {
   .about {
     display: flex;
+    align-items: center;
   }
 
   .panel {
-    /* Some magic */
     padding-inline: 2.5em;
-    max-width: 54.4ch;
+    max-width: 70ch;
   }
 
   .image-container {
