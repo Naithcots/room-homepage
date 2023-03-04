@@ -1,19 +1,33 @@
 import Image from "next/image";
+import { useState } from "react";
 import styles from "./index.module.css";
+import slides from "./data/slides";
+
+const slidesCount = slides.length;
 
 const Hero = () => {
+  const [slideId, setSlideId] = useState(0);
+
+  const previousSlide = () => {
+    setSlideId((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+  };
+
+  const nextSlide = () => {
+    setSlideId((prev) => (prev + 1) % slidesCount);
+  };
+
   return (
     <section>
       <div className={styles["first-panel"]}>
         <Image
-          src={"/images/mobile-image-hero-1.jpg"}
+          src={slides[slideId].imageUrl.mobile}
           width={840}
           height={534}
           alt=""
           className={styles.image}
         />
         <div className={styles["arrow-container"]}>
-          <button className={styles.arrow}>
+          <button className={styles.arrow} onClick={previousSlide}>
             <Image
               src={"/images/icon-angle-left.svg"}
               width={28}
@@ -22,7 +36,7 @@ const Hero = () => {
               className={styles.icon}
             />
           </button>
-          <button className={styles.arrow}>
+          <button className={styles.arrow} onClick={nextSlide}>
             <Image
               src={"/images/icon-angle-right.svg"}
               width={28}
@@ -34,14 +48,8 @@ const Hero = () => {
         </div>
       </div>
       <div className={styles["second-panel"]}>
-        <h2 className={styles.title}>Discover innovative ways to decorate</h2>
-        <p className={styles.description}>
-          We provide unmatched quality, comfort, and style for property owners
-          across the country. Our experts combine form and function in bringing
-          your vision to life. Create a room in your own style with our
-          collection and make your property a reflection of you and what you
-          love.
-        </p>
+        <h2 className={styles.title}>{slides[slideId].title}</h2>
+        <p className={styles.description}>{slides[slideId].description}</p>
         <button className={styles.cta}>
           <p className={styles["spaced-text"]}>SHOP NOW</p>
           <Image
