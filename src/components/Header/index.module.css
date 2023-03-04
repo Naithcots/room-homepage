@@ -1,14 +1,21 @@
 .header {
-  width: 100%;
-  padding: 2em 1.5em;
-
   position: absolute;
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 900;
+}
+
+.header-panel {
+  width: 100%;
+  padding-inline: 1.5em;
 
   display: flex;
 
   color: white;
-
-  z-index: 900;
 }
 
 .hamburger {
