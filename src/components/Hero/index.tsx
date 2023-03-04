@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { useState } from "react";
+import { FC, useState } from "react";
 import styles from "./index.module.css";
 import slides from "./data/slides";
+import ArrowContainer from "./ArrowContainer";
 
 const slidesCount = slides.length;
 
@@ -34,26 +35,11 @@ const Hero = () => {
           alt=""
           className={styles["desktop-image"]}
         />
-        <div className={styles["arrow-container"]}>
-          <button className={styles.arrow} onClick={previousSlide}>
-            <Image
-              src={"/images/icon-angle-left.svg"}
-              width={28}
-              height={48}
-              alt="arrow-left"
-              className={styles.icon}
-            />
-          </button>
-          <button className={styles.arrow} onClick={nextSlide}>
-            <Image
-              src={"/images/icon-angle-right.svg"}
-              width={28}
-              height={48}
-              alt="arrow-right"
-              className={styles.icon}
-            />
-          </button>
-        </div>
+        <ArrowContainer
+          variant="mobile"
+          previousSlide={previousSlide}
+          nextSlide={nextSlide}
+        />
       </div>
       <div className={styles["second-panel"]}>
         <h2 className={styles.title}>{slides[slideId].title}</h2>
@@ -68,28 +54,11 @@ const Hero = () => {
             className={styles["cta-arrow"]}
           />
         </button>
-        <div
-          className={`${styles["arrow-container"]} ${styles["arrow-container-desktop"]}`}
-        >
-          <button className={styles.arrow} onClick={previousSlide}>
-            <Image
-              src={"/images/icon-angle-left.svg"}
-              width={28}
-              height={48}
-              alt="arrow-left"
-              className={styles.icon}
-            />
-          </button>
-          <button className={styles.arrow} onClick={nextSlide}>
-            <Image
-              src={"/images/icon-angle-right.svg"}
-              width={28}
-              height={48}
-              alt="arrow-right"
-              className={styles.icon}
-            />
-          </button>
-        </div>
+        <ArrowContainer
+          variant="desktop"
+          previousSlide={previousSlide}
+          nextSlide={nextSlide}
+        />
       </div>
     </section>
   );

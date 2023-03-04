@@ -35,7 +35,13 @@
   display: grid;
   place-items: center;
 
+  cursor: pointer;
+
   background-color: black;
+}
+
+.arrow:hover {
+  background-color: var(--very-dark-gray);
 }
 
 .icon {
@@ -67,10 +73,17 @@
   background-color: transparent;
   border: none;
 
+  width: fit-content;
   margin-top: 1em;
   display: flex;
   align-items: center;
   gap: 1.25em;
+
+  cursor: pointer;
+}
+
+.cta:hover {
+  color: var(--dark-gray);
 }
 
 .spaced-text {
