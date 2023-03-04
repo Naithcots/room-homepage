@@ -1,5 +1,6 @@
 .first-panel {
   position: relative;
+  overflow: hidden;
 }
 
 .image {

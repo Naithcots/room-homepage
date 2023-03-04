@@ -3,14 +3,16 @@ import styles from "./index.module.css";
 
 const About = () => {
   return (
-    <section>
-      <Image
-        src={"/images/image-about-dark.jpg"}
-        width={420}
-        height={266}
-        alt=""
-        className={styles.image}
-      />
+    <section className={styles.about}>
+      <div className={styles["image-container"]}>
+        <Image
+          src={"/images/image-about-dark.jpg"}
+          width={420}
+          height={266}
+          alt=""
+          className={styles.image}
+        />
+      </div>
       <div className={styles.panel}>
         <h4 className={styles.title}>ABOUT OUR FURNITURE</h4>
         <p className={styles.description}>
@@ -22,13 +24,15 @@ const About = () => {
           dream space.
         </p>
       </div>
-      <Image
-        src={"/images/image-about-light.jpg"}
-        width={440}
-        height={266}
-        alt=""
-        className={styles.image}
-      />
+      <div className={styles["image-container"]}>
+        <Image
+          src={"/images/image-about-light.jpg"}
+          width={440}
+          height={266}
+          alt=""
+          className={styles.image}
+        />
+      </div>
     </section>
   );
 };

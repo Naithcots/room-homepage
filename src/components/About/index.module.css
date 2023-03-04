@@ -6,12 +6,13 @@
 }
 
 .title {
-  font-size: 1.1rem;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
   letter-spacing: 3px;
 }
 
 .description {
   color: var(--dark-gray);
+  font-size: var(--p-size);
   line-height: 1.25em;
 }
 
@@ -20,4 +21,26 @@
 
   max-width: 100%;
   height: auto;
+}
+
+@media screen and (min-width: 50em) {
+  .about {
+    display: flex;
+  }
+
+  .panel {
+    /* Some magic */
+    padding-inline: 2.5em;
+    max-width: 54.4ch;
+  }
+
+  .image-container {
+    overflow: hidden;
+  }
+
+  .image {
+    margin-inline: unset;
+    max-width: unset;
+    height: 100%;
+  }
 }
