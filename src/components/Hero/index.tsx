@@ -17,14 +17,22 @@ const Hero = () => {
   };
 
   return (
-    <section>
+    <section className={styles.hero}>
       <div className={styles["first-panel"]}>
         <Image
           src={slides[slideId].imageUrl.mobile}
+          width={375}
+          height={360}
+          alt=""
+          className={styles.image}
+        />
+
+        <Image
+          src={slides[slideId].imageUrl.desktop}
           width={840}
           height={534}
           alt=""
-          className={styles.image}
+          className={styles["desktop-image"]}
         />
         <div className={styles["arrow-container"]}>
           <button className={styles.arrow} onClick={previousSlide}>
@@ -60,6 +68,28 @@ const Hero = () => {
             className={styles["cta-arrow"]}
           />
         </button>
+        <div
+          className={`${styles["arrow-container"]} ${styles["arrow-container-desktop"]}`}
+        >
+          <button className={styles.arrow} onClick={previousSlide}>
+            <Image
+              src={"/images/icon-angle-left.svg"}
+              width={28}
+              height={48}
+              alt="arrow-left"
+              className={styles.icon}
+            />
+          </button>
+          <button className={styles.arrow} onClick={nextSlide}>
+            <Image
+              src={"/images/icon-angle-right.svg"}
+              width={28}
+              height={48}
+              alt="arrow-right"
+              className={styles.icon}
+            />
+          </button>
+        </div>
       </div>
     </section>
   );

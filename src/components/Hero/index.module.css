@@ -5,7 +5,11 @@
 .image {
   display: block;
   height: auto;
-  max-width: 100%;
+  width: 100%;
+}
+
+.desktop-image {
+  display: none;
 }
 
 .arrow-container {
@@ -14,6 +18,10 @@
   right: 0;
 
   display: flex;
+}
+
+.arrow-container-desktop {
+  display: none;
 }
 
 .arrow {
@@ -43,11 +51,12 @@
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 5vw, 2.5rem);
   letter-spacing: -1px;
 }
 
 .description {
+  font-size: clamp(1rem, 2vw, 1.1rem);
   line-height: 1.25em;
   color: var(--dark-gray);
 }
@@ -67,4 +76,42 @@
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 8px;
+}
+
+@media screen and (min-width: 40em) {
+  .image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 0.75fr;
+  }
+
+  .first-panel {
+    overflow: hidden;
+  }
+
+  .second-panel {
+    max-width: 75ch;
+    padding-inline: clamp(2.5em, 5vw, 6em);
+
+    position: relative;
+    justify-content: center;
+  }
+
+  .arrow-container {
+    display: none;
+  }
+
+  .arrow-container-desktop {
+    display: flex;
+    left: 0;
+  }
 }
