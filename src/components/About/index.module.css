@@ -1,0 +1,21 @@
+.panel {
+  padding: 3em var(--px);
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.title {
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+}
+
+.description {
+  color: var(--dark-gray);
+  line-height: 1.25em;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+}

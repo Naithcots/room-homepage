@@ -1,0 +1,70 @@
+.first-panel {
+  position: relative;
+}
+
+.image {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+.arrow-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: flex;
+}
+
+.arrow {
+  appearance: none;
+
+  width: 4em;
+  aspect-ratio: 1 / 1;
+  border: none;
+
+  display: grid;
+  place-items: center;
+
+  background-color: black;
+}
+
+.icon {
+  width: auto;
+  max-height: 35%;
+}
+
+.second-panel {
+  padding: 3em var(--px);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+.title {
+  font-size: 2.25rem;
+  letter-spacing: -1px;
+}
+
+.description {
+  line-height: 1.25em;
+  color: var(--dark-gray);
+}
+
+.cta {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+
+  margin-top: 1em;
+  display: flex;
+  align-items: center;
+  gap: 1.25em;
+}
+
+.spaced-text {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 8px;
+}
