@@ -3,15 +3,13 @@
   --dark-gray: hsl(0, 0%, 63%);
   --very-dark-gray: hsl(0, 0%, 27%);
 
-  /* Breakpoints */
-  --tablet: 48em;
-  --desktop: 60em;
-
   /* Spacing */
-  --px: 2em;
+  --p-container: 2rem;
 
   /* Font sizes */
-  --p-size: clamp(1rem, 2vw + 1rem, 1.1rem);
+  --fs-xl: clamp(2.25rem, 2vw + 1rem, 3rem);
+  --fs-lg: clamp(1.25rem, 2vw + 1rem, 1.4rem);
+  --fs-md: clamp(1rem, 2vw + 1rem, 1.15rem);
 }
 
 * {

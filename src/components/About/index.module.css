@@ -1,18 +1,18 @@
 .panel {
-  padding: 3em var(--px);
+  padding: 3em var(--p-container);
   display: flex;
   flex-direction: column;
   gap: 1em;
 }
 
 .title {
-  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  font-size: var(--fs-lg);
   letter-spacing: 3px;
 }
 
 .description {
   color: var(--dark-gray);
-  font-size: var(--p-size);
+  font-size: var(--fs-md);
   line-height: 1.25em;
 }
 
