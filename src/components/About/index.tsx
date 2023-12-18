@@ -3,7 +3,7 @@ import styles from "./index.module.css";
 
 const About = () => {
   return (
-    <section className={styles.about}>
+    <>
       <div className={styles["image-container"]}>
         <Image
           src={"/images/image-about-dark.jpg"}
@@ -33,7 +33,7 @@ const About = () => {
           className={styles.image}
         />
       </div>
-    </section>
+    </>
   );
 };
 export default About;

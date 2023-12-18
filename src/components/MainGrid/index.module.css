@@ -1,0 +1,8 @@
+@media screen and (min-width: 840px) {
+  .grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 0.35fr 1fr;
+    grid-template-rows: repeat(2, auto);
+  }
+}

@@ -1,0 +1,54 @@
+.icon {
+  width: 20%;
+  height: auto;
+}
+
+.arrow-container {
+  display: flex;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.arrow-container-desktop {
+  display: none;
+
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.arrow {
+  appearance: none;
+
+  width: 4em;
+  aspect-ratio: 1 / 1;
+  border: none;
+
+  display: grid;
+  place-items: center;
+
+  cursor: pointer;
+
+  background-color: black;
+}
+
+.arrow:hover {
+  background-color: var(--very-dark-gray);
+}
+
+@media screen and (min-width: 840px) {
+  .arrow-container {
+    display: none;
+  }
+
+  .arrow-container-desktop {
+    display: flex;
+  }
+
+  .arrow {
+    width: 50%;
+  }
+}

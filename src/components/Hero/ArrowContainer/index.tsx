@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { FC, useState } from "react";
+import { FC } from "react";
 import styles from "./index.module.css";
-import slides from "./data/slides";
 
 type ArrowContainerProps = {
   variant: "mobile" | "desktop";

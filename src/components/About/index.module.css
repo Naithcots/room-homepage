@@ -23,24 +23,29 @@
   height: auto;
 }
 
-@media screen and (min-width: 50em) {
-  .about {
-    display: flex;
-    align-items: center;
-  }
-
+@media screen and (min-width: 840px) {
   .panel {
     padding-inline: 2.5em;
     max-width: 70ch;
+
+    grid-column: 2 / 4;
   }
 
-  .image-container {
-    overflow: hidden;
+  .image-container:first-child {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .image-container:last-child {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
   }
 
   .image {
     margin-inline: unset;
     max-width: unset;
+    width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 }

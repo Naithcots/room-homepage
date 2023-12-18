@@ -1,8 +1,7 @@
-import About from "@/components/About";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import Head from "next/head";
+import MainGrid from "@/components/MainGrid";
 import styles from "@/styles/Home.module.css";
+import Head from "next/head";
 
 const Home = () => {
   return (
@@ -13,8 +12,7 @@ const Home = () => {
 
       <div className={styles.container}>
         <Header />
-        <Hero />
-        <About />
+        <MainGrid />
       </div>
     </>
   );

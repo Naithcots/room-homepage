@@ -1,8 +1,8 @@
 import Image from "next/image";
-import { FC, useState } from "react";
-import styles from "./index.module.css";
-import slides from "./data/slides";
+import { useState } from "react";
 import ArrowContainer from "./ArrowContainer";
+import slides from "./data/slides";
+import styles from "./index.module.css";
 
 const slidesCount = slides.length;
 
@@ -18,16 +18,15 @@ const Hero = () => {
   };
 
   return (
-    <section className={styles.hero}>
-      <div className={styles["first-panel"]}>
+    <>
+      <div className={styles["cols-first"]}>
         <Image
           src={slides[slideId].imageUrl.mobile}
           width={375}
           height={360}
           alt=""
-          className={styles.image}
+          className={styles["mobile-image"]}
         />
-
         <Image
           src={slides[slideId].imageUrl.desktop}
           width={840}
@@ -41,7 +40,16 @@ const Hero = () => {
           nextSlide={nextSlide}
         />
       </div>
-      <div className={styles["second-panel"]}>
+
+      <div className={styles["cols-second"]}>
+        <ArrowContainer
+          variant="desktop"
+          previousSlide={previousSlide}
+          nextSlide={nextSlide}
+        />
+      </div>
+
+      <div className={styles["cols-third"]}>
         <h2 className={styles.title}>{slides[slideId].title}</h2>
         <p className={styles.description}>{slides[slideId].description}</p>
         <button className={styles.cta}>
@@ -54,13 +62,8 @@ const Hero = () => {
             className={styles["cta-arrow"]}
           />
         </button>
-        <ArrowContainer
-          variant="desktop"
-          previousSlide={previousSlide}
-          nextSlide={nextSlide}
-        />
       </div>
-    </section>
+    </>
   );
 };
 export default Hero;
